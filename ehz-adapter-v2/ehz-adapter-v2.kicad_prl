@@ -60,7 +60,7 @@
       36,
       37
     ],
-    "visible_layers": "0ffff_80000001"
+    "visible_layers": "000fdff_80000001"
   },
   "meta": {
     "filename": "ehz-adapter-v2.kicad_prl",
