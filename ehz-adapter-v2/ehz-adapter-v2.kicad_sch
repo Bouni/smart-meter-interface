@@ -1168,7 +1168,7 @@
     (uuid "54e32baa-d9c6-4f61-a2f9-7b357e5cd088")
     (property "Reference" "TP1" (id 0) (at 27.368 123.425 90))
     (property "Value" "TestPoint" (id 1) (at 32.4485 120.6435 90))
-    (property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm" (id 2) (at 34.29 118.11 0)
+    (property "Footprint" "bouni:SolderPad1x3" (id 2) (at 34.29 118.11 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 34.29 118.11 0)
@@ -1181,7 +1181,7 @@
     (uuid "11b6ce28-5214-484f-9e88-625cb86c3526")
     (property "Reference" "TP2" (id 0) (at 27.369 125.965 90))
     (property "Value" "TestPoint" (id 1) (at 32.4485 128.2635 90))
-    (property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm" (id 2) (at 34.29 120.65 0)
+    (property "Footprint" "bouni:SolderPad1x3" (id 2) (at 34.29 120.65 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 34.29 120.65 0)
@@ -1710,10 +1710,10 @@
       (reference "R5") (unit 1) (value "10k") (footprint "Resistor_SMD:R_0805_2012Metric")
     )
     (path "/54e32baa-d9c6-4f61-a2f9-7b357e5cd088"
-      (reference "TP1") (unit 1) (value "TestPoint") (footprint "TestPoint:TestPoint_Pad_1.0x1.0mm")
+      (reference "TP1") (unit 1) (value "TestPoint") (footprint "bouni:SolderPad1x3")
     )
     (path "/11b6ce28-5214-484f-9e88-625cb86c3526"
-      (reference "TP2") (unit 1) (value "TestPoint") (footprint "TestPoint:TestPoint_Pad_1.0x1.0mm")
+      (reference "TP2") (unit 1) (value "TestPoint") (footprint "bouni:SolderPad1x3")
     )
     (path "/80479276-5459-411d-8eb1-3725ab0f16c5"
       (reference "U1") (unit 1) (value "mh-et-live-minikit") (footprint "bouni:MH-ET LIVE MiniKit")
