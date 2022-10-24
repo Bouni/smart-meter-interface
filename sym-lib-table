@@ -1,5 +1,4 @@
 (sym_lib_table
-  (lib (name "d-sun-mp1584en")(type "KiCad")(uri "C:/Projekte/KiCAD/VarioControl/library/d-sun-mp1584en.kicad_sym")(options "")(descr ""))
-  (lib (name "mh-et-live-minikit")(type "KiCad")(uri "${KIPRJMOD}/lib/mh-et-live-minikit.kicad_sym")(options "")(descr ""))
   (lib (name "bouni")(type "KiCad")(uri "${KIPRJMOD}/lib/bouni.kicad_sym")(options "")(descr ""))
+  (lib (name "LCSC")(type "KiCad")(uri "${KIPRJMOD}/LCSC.kicad_sym")(options "")(descr ""))
 )
