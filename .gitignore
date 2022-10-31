@@ -3,3 +3,4 @@ ehz-adapter-v2/ehz-adapter-v2-backups/
 gerber
 jlcpcb
 *-backups*
+*.py
