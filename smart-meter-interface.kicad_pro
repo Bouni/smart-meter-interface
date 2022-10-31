@@ -438,7 +438,7 @@
       "idf": "",
       "netlist": "",
       "specctra_dsn": "",
-      "step": "ehz-adapter-v3.step",
+      "step": "smart-meter-interface.step",
       "vmrl": "",
       "vrml": ""
     },
