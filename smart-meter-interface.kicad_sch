@@ -2339,7 +2339,7 @@
     (property "Datasheet" "~" (at 32.385 41.91 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "LCSC" "C11702" (at 32.385 41.91 0)
+    (property "LCSC" "C25744" (at 32.385 41.91 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 7c85d49f-7191-4699-895f-1c1169df4773))
