@@ -1,0 +1,305 @@
+substitutions:
+  devicename: smart-meter-heatpump
+  upper_devicename: Smart Meter Heatpump
+  
+<<: !include smart-meter-interface.yaml
+
+# https://hager.com/de/katalog/download/product/asset/file/22DE0001-TECHNIK-EHZ.PDF/
+
+
+sensor:
+  - platform: sml
+    name: "Total energy"
+    obis_code: "1-0:1.8.0"
+    unit_of_measurement: kWh
+    accuracy_decimals: 1
+    device_class: energy
+    state_class: total_increasing
+    filters:
+      - multiply: 0.0001
+
+  - platform: sml
+    name: "Total energy Tarif 1"
+    obis_code: "1-0:1.8.1"
+    unit_of_measurement: kWh
+    accuracy_decimals: 1
+    device_class: energy
+    state_class: total_increasing
+    filters:
+      - multiply: 0.0001
+
+  - platform: sml
+    name: "Total energy Tarif 2"
+    obis_code: "1-0:1.8.2"
+    unit_of_measurement: kWh
+    accuracy_decimals: 1
+    device_class: energy
+    state_class: total_increasing
+    filters:
+      - multiply: 0.0001
+
+
+  - platform: sml
+    name: "Active power"
+    obis_code: "1-0:16.7.0"
+    unit_of_measurement: kW
+    accuracy_decimals: 1
+    device_class: power
+    state_class: measurement
+    filters:
+      - multiply: 0.0001
+
+
+  - platform: sml
+    name: "Active power L1"
+    obis_code: "1-0:36.7.0"
+    unit_of_measurement: kW
+    accuracy_decimals: 1
+    device_class: power
+    state_class: measurement
+    filters:
+      - multiply: 0.0001
+
+  - platform: sml
+    name: "Current L1"
+    obis_code: "1-0:31.7.0"
+    unit_of_measurement: A
+    accuracy_decimals: 2
+    device_class: current
+    state_class: measurement
+    filters:
+      - multiply: 0.01
+
+  - platform: sml
+    name: "Voltage L1"
+    obis_code: "1-0:32.7.0"
+    unit_of_measurement: V
+    accuracy_decimals: 1
+    device_class: voltage
+    state_class: measurement
+    filters:
+      - multiply: 0.01
+
+
+  - platform: sml
+    name: "Active power L2"
+    obis_code: "1-0:56.7.0"
+    unit_of_measurement: kW
+    accuracy_decimals: 1
+    device_class: power
+    state_class: measurement
+    filters:
+      - multiply: 0.0001
+
+  - platform: sml
+    name: "Current L2"
+    obis_code: "1-0:51.7.0"
+    unit_of_measurement: A
+    accuracy_decimals: 2
+    device_class: current
+    state_class: measurement
+    filters:
+      - multiply: 0.01
+
+  - platform: sml
+    name: "Voltage L2"
+    obis_code: "1-0:52.7.0"
+    unit_of_measurement: V
+    accuracy_decimals: 1
+    device_class: voltage
+    state_class: measurement
+    filters:
+      - multiply: 0.01
+
+
+  - platform: sml
+    name: "Active power L3"
+    obis_code: "1-0:76.7.0"
+    unit_of_measurement: kW
+    accuracy_decimals: 1
+    device_class: power
+    state_class: measurement
+    filters:
+      - multiply: 0.0001
+
+  - platform: sml
+    name: "Current L3"
+    obis_code: "1-0:71.7.0"
+    unit_of_measurement: A
+    accuracy_decimals: 2
+    device_class: current
+    state_class: measurement
+    filters:
+      - multiply: 0.01
+
+  - platform: sml
+    name: "Voltage L3"
+    obis_code: "1-0:51.7.0"
+    unit_of_measurement: V
+    accuracy_decimals: 1
+    device_class: voltage
+    state_class: measurement
+    filters:
+      - multiply: 0.01
+
+
+  - platform: sml
+    name: "Chip temperature"
+    obis_code: "1-0:96.50.0"
+    unit_of_measurement: "°C"
+    accuracy_decimals: 1
+    device_class: temperature
+    state_class: measurement
+    # filters:
+    #   - multiply: 0.01
+
+  # - platform: sml
+  #   name: "Voltage minimum"
+  #   obis_code: "1-0:96.50.3"
+  #   unit_of_measurement: V
+  #   accuracy_decimals: 1
+  #   device_class: voltage
+  #   state_class: measurement
+  #   filters:
+  #     - multiply: 0.01
+
+  # - platform: sml
+  #   name: "Voltage maximum"
+  #   obis_code: "1-0:96.50.3"
+  #   unit_of_measurement: V
+  #   accuracy_decimals: 1
+  #   device_class: voltage
+  #   state_class: measurement
+  #   filters:
+  #     - multiply: 0.01
+
+  # - platform: sml
+  #   name: "Chip temperature minimum"
+  #   obis_code: "1-0:96.50.0"
+  #   unit_of_measurement: "°C"
+  #   accuracy_decimals: 1
+  #   device_class: temperature
+  #   state_class: measurement
+  #   # filters:
+  #   #   - multiply: 0.01
+  
+  # - platform: sml
+  #   name: "Chip temperature maximum"
+  #   obis_code: "1-0:96.50.0"
+  #   unit_of_measurement: "°C"
+  #   accuracy_decimals: 1
+  #   device_class: temperature
+  #   state_class: measurement
+  #   # filters:
+  #   #   - multiply: 0.01
+
+  # - platform: sml
+  #   name: "Chip temperature mean"
+  #   obis_code: "1-0:96.50.0"
+  #   unit_of_measurement: "°C"
+  #   accuracy_decimals: 1
+  #   device_class: temperature
+  #   state_class: measurement
+  #   # filters:
+  #   #   - multiply: 0.01
+
+  - platform: sml
+    name: "Phase offset current / voltage L1"
+    obis_code: "1-0:81.7.4"
+    unit_of_measurement: "°"
+    accuracy_decimals: 1
+    # device_class: angle
+    state_class: measurement
+    # filters:
+    #   - multiply: 0.01
+
+  - platform: sml
+    name: "Phase offset current / voltage L2"
+    obis_code: "1-0:81.7.15"
+    unit_of_measurement: "°"
+    accuracy_decimals: 1
+    # device_class: angle
+    state_class: measurement
+    # filters:
+    #   - multiply: 0.01
+
+  - platform: sml
+    name: "Phase offset current / voltage L3"
+    obis_code: "1-0:81.7.26"
+    unit_of_measurement: "°"
+    accuracy_decimals: 1
+    # device_class: angle
+    state_class: measurement
+    # filters:
+    #   - multiply: 0.01
+
+  - platform: sml
+    name: "Phase offset voltage L1/L2"
+    obis_code: "1-0:81.7.1"
+    unit_of_measurement: "°"
+    accuracy_decimals: 1
+    # device_class: angle
+    state_class: measurement
+    # filters:
+    #   - multiply: 0.01
+
+  - platform: sml
+    name: "Phase offset voltage L1/L3"
+    obis_code: "1-0:81.7.2"
+    unit_of_measurement: "°"
+    accuracy_decimals: 1
+    # device_class: angle
+    state_class: measurement
+    # filters:
+    #   - multiply: 0.01
+
+  - platform: sml
+    name: "Apparent power L1"
+    obis_code: "1-0:23.7.0"
+    unit_of_measurement: "VA"
+    accuracy_decimals: 1
+    device_class: apparent_power
+    state_class: measurement
+    filters:
+      - multiply: 0.0001
+
+  - platform: sml
+    name: "Apparent power L2"
+    obis_code: "1-0:43.7.0"
+    unit_of_measurement: "VA"
+    accuracy_decimals: 1
+    device_class: apparent_power
+    state_class: measurement
+    filters:
+      - multiply: 0.0001
+    
+  - platform: sml
+    name: "Apparent power L3"
+    obis_code: "1-0:63.7.0"
+    unit_of_measurement: "VA"
+    accuracy_decimals: 1
+    device_class: apparent_power
+    state_class: measurement
+    filters:
+      - multiply: 0.0001
+
+text_sensor:
+  - platform: sml
+    name: "Manufacturer"
+    obis_code: "129-129:199.130.3"
+    format: text
+    sml_id: smlid
+
+  - platform: sml
+    name: "Device Identification"
+    obis_code: "1-0:0.0.9"
+    format: text
+    sml_id: smlid
+
+  - platform: sml
+    name: "Public key"
+    obis_code: "129-129:199.130.5"
+    format: text
+    sml_id: smlid
+
+    
