@@ -3,6 +3,10 @@ esphome:
   platform: ESP32
   board: mhetesp32minikit
 
+external_components:
+  - source: github://alengwenus/esphome_components@main
+    components: [ sml ]
+
 # Wifi settings
 wifi:
   networks:

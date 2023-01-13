@@ -145,113 +145,94 @@ sensor:
 
   - platform: sml
     name: "Chip temperature"
-    obis_code: "1-0:96.50.0"
+    obis_code: "1-0:96.50.0*2"
     unit_of_measurement: "°C"
     accuracy_decimals: 1
     device_class: temperature
     state_class: measurement
-    # filters:
-    #   - multiply: 0.01
+    filters:
+      - multiply: 0.1
 
-  # - platform: sml
-  #   name: "Voltage minimum"
-  #   obis_code: "1-0:96.50.3"
-  #   unit_of_measurement: V
-  #   accuracy_decimals: 1
-  #   device_class: voltage
-  #   state_class: measurement
-  #   filters:
-  #     - multiply: 0.01
-
-  # - platform: sml
-  #   name: "Voltage maximum"
-  #   obis_code: "1-0:96.50.3"
-  #   unit_of_measurement: V
-  #   accuracy_decimals: 1
-  #   device_class: voltage
-  #   state_class: measurement
-  #   filters:
-  #     - multiply: 0.01
-
-  # - platform: sml
-  #   name: "Chip temperature minimum"
-  #   obis_code: "1-0:96.50.0"
-  #   unit_of_measurement: "°C"
-  #   accuracy_decimals: 1
-  #   device_class: temperature
-  #   state_class: measurement
-  #   # filters:
-  #   #   - multiply: 0.01
+  - platform: sml
+    name: "Chip temperature minimum"
+    obis_code: "1-0:96.50.0*3"
+    unit_of_measurement: "°C"
+    accuracy_decimals: 1
+    device_class: temperature
+    state_class: measurement
   
-  # - platform: sml
-  #   name: "Chip temperature maximum"
-  #   obis_code: "1-0:96.50.0"
-  #   unit_of_measurement: "°C"
-  #   accuracy_decimals: 1
-  #   device_class: temperature
-  #   state_class: measurement
-  #   # filters:
-  #   #   - multiply: 0.01
+  - platform: sml
+    name: "Chip temperature maximum"
+    obis_code: "1-0:96.50.0*4"
+    unit_of_measurement: "°C"
+    accuracy_decimals: 1
+    device_class: temperature
+    state_class: measurement
 
-  # - platform: sml
-  #   name: "Chip temperature mean"
-  #   obis_code: "1-0:96.50.0"
-  #   unit_of_measurement: "°C"
-  #   accuracy_decimals: 1
-  #   device_class: temperature
-  #   state_class: measurement
-  #   # filters:
-  #   #   - multiply: 0.01
+  - platform: sml
+    name: "Chip temperature mean"
+    obis_code: "1-0:96.50.0*5"
+    unit_of_measurement: "°C"
+    accuracy_decimals: 1
+    device_class: temperature
+    state_class: measurement
+
+  - platform: sml
+    name: "Voltage minimum"
+    obis_code: "1-0:96.50.3*3"
+    unit_of_measurement: V
+    accuracy_decimals: 1
+    device_class: voltage
+    state_class: measurement
+
+  - platform: sml
+    name: "Voltage maximum"
+    obis_code: "1-0:96.50.3*4"
+    unit_of_measurement: V
+    accuracy_decimals: 1
+    device_class: voltage
+    state_class: measurement
 
   - platform: sml
     name: "Phase offset current / voltage L1"
     obis_code: "1-0:81.7.4"
     unit_of_measurement: "°"
     accuracy_decimals: 1
-    # device_class: angle
     state_class: measurement
-    # filters:
-    #   - multiply: 0.01
+    filters:
+      - multiply: 0.01
 
   - platform: sml
     name: "Phase offset current / voltage L2"
     obis_code: "1-0:81.7.15"
     unit_of_measurement: "°"
     accuracy_decimals: 1
-    # device_class: angle
     state_class: measurement
-    # filters:
-    #   - multiply: 0.01
+    filters:
+      - multiply: 0.01
 
   - platform: sml
     name: "Phase offset current / voltage L3"
     obis_code: "1-0:81.7.26"
     unit_of_measurement: "°"
     accuracy_decimals: 1
-    # device_class: angle
     state_class: measurement
-    # filters:
-    #   - multiply: 0.01
+    filters:
+      - multiply: 0.01
 
   - platform: sml
     name: "Phase offset voltage L1/L2"
     obis_code: "1-0:81.7.1"
     unit_of_measurement: "°"
     accuracy_decimals: 1
-    # device_class: angle
     state_class: measurement
-    # filters:
-    #   - multiply: 0.01
 
   - platform: sml
     name: "Phase offset voltage L1/L3"
     obis_code: "1-0:81.7.2"
     unit_of_measurement: "°"
     accuracy_decimals: 1
-    # device_class: angle
     state_class: measurement
-    # filters:
-    #   - multiply: 0.01
 
   - platform: sml
     name: "Apparent power L1"
