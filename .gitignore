@@ -4,3 +4,4 @@ gerber
 jlcpcb
 *-backups*
 *.py
+*.lck
